@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+  PROYECTO FINAL — Galería de fotos accesible e interactiva
+  ==========================================================
+  Antes de entregar, valida este archivo en:
+    1) W3C Markup Validator  → https://validator.w3.org/
+    2) WAVE                  → https://wave.webaim.org/
+    3) axe DevTools (extensión de navegador)
+
+  Las imágenes son ilustraciones de muestra en SVG. Sustitúyelas por
+  tus propias fotografías (y ajusta el "alt" para que describa la foto real).
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuaderno de Senderos — Galería fotográfica accesible</title>
+  <meta name="description" content="Proyecto final: galería de fotos accesible e interactiva, navegable con ratón y teclado.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <p class="kicker">Galería fotográfica accesible</p>
+    <h1>Cuaderno de Senderos</h1>
+    <p class="intro">
+      Seis paradas de un mismo recorrido. Explora la galería con el
+      <strong>ratón</strong> o con la tecla <strong>Tab</strong> del teclado:
+      cada fotografía responde igual sin importar cómo llegues a ella, y la
+      nota de campo de abajo se actualiza con lo que estás mirando.
+    </p>
+  </header>
+
+  <main id="contenido">
+    <h2 class="section-title">Fotografías del sendero</h2>
+
+    <div class="galeria">
+      <figure id="fig-1" aria-labelledby="cap-1">
+        <img src="assets/sendero-amanecer.svg" alt="Sendero de tierra entre árboles altos, con la luz del sol entrando en ángulo bajo entre las ramas.">
+        <figcaption id="cap-1">El sendero al amanecer</figcaption>
+      </figure>
+
+      <figure id="fig-2" aria-labelledby="cap-2">
+        <img src="assets/musgo-piedra.svg" alt="Primer plano de una piedra cubierta de musgo verde con pequeñas gotas de humedad sobre la superficie.">
+        <figcaption id="cap-2">Musgo sobre piedra</figcaption>
+      </figure>
+
+      <figure id="fig-3" aria-labelledby="cap-3">
+        <img src="assets/cascada-oculta.svg" alt="Cascada de agua cayendo entre rocas oscuras, con espuma blanca y neblina en la base.">
+        <figcaption id="cap-3">Cascada oculta</figcaption>
+      </figure>
+
+      <figure id="fig-4" aria-labelledby="cap-4">
+        <img src="assets/bosque-niebla.svg" alt="Bosque denso con varias capas de árboles que se difuminan hacia el fondo por una neblina baja.">
+        <figcaption id="cap-4">Bosque de niebla</figcaption>
+      </figure>
+
+      <figure id="fig-5" aria-labelledby="cap-5">
+        <img src="assets/semillas-viento.svg" alt="Cabeza de un diente de león con semillas separándose y flotando en el aire.">
+        <figcaption id="cap-5">Semillas al viento</figcaption>
+      </figure>
+
+      <figure id="fig-6" aria-labelledby="cap-6">
+        <img src="assets/huellas-arena.svg" alt="Huellas de pisadas descalzas marcadas sobre arena húmeda, cerca de la orilla del mar.">
+        <figcaption id="cap-6">Huellas en la arena</figcaption>
+      </figure>
+    </div>
+
+    <div class="cuaderno-campo" aria-live="polite">
+      <span class="etiqueta">Nota de campo</span>
+      <p id="nota-cuaderno">Recorre la galería para leer aquí cada nota.</p>
+    </div>
+  </main>
+
+  <footer>
+    Proyecto final del curso — recuerda validar este documento en el
+    validador de W3C, WAVE y axe antes de entregarlo y de la revisión por pares.
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
